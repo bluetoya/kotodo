@@ -8,6 +8,15 @@
 - JPA
 이후 더 필요하면 추가 예정
 
+### (우선) 구현할 API
+- tod 리스트 가져오기
+- todo 추가
+- todo 수정
+- todo 삭제
+
+### 참고 문서
+- spring.io kotlin : https://spring.io/guides/tutorials/spring-boot-kotlin
+
 ### 컨벤션
 - git commit message
   - github convention 사용
