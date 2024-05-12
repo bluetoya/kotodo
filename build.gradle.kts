@@ -5,8 +5,9 @@ plugins {
 	id("io.spring.dependency-management") version "1.1.4"
 	kotlin("jvm") version "1.9.23"
 	kotlin("plugin.spring") version "1.9.23"
-	kotlin("plugin.allopen") version "1.9.22"
-	kotlin("plugin.jpa") version "1.9.22"
+	kotlin("plugin.allopen") version "1.9.23"
+	kotlin("plugin.jpa") version "1.9.23"
+	kotlin("kapt") version "1.9.23"
 }
 
 allOpen {
@@ -40,8 +41,9 @@ dependencies {
 		exclude(module = "mockito-core")
 	}
 	testImplementation("org.junit.jupiter:junit-jupiter-api")
-	testImplementation("com.ninja-squad:springmockk")
+	testImplementation("com.ninja-squad:springmockk:4.0.2")
 	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+	kapt("org.springframework.boot:spring-boot-configuration-processor")
 }
 
 tasks.withType<KotlinCompile> {
