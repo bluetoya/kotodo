@@ -1,4 +1,4 @@
-package com.bluetoya.kotodo
+package com.bluetoya.kotodo.example
 
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Controller
@@ -10,7 +10,8 @@ import org.springframework.web.server.ResponseStatusException
 
 @Controller
 class HtmlController(private val repository: ArticleRepository,
-                     private val properties: BlogProperties) {
+                     private val properties: BlogProperties
+) {
 
     @GetMapping("/")
     fun blog(model: Model): String {

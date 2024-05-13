@@ -1,5 +1,6 @@
 package com.bluetoya.kotodo
 
+import com.bluetoya.kotodo.example.BlogProperties
 import org.springframework.boot.Banner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties

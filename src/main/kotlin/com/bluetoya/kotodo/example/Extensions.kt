@@ -1,4 +1,4 @@
-package com.bluetoya.kotodo
+package com.bluetoya.kotodo.example
 
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatterBuilder

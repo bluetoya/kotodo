@@ -1,5 +1,6 @@
-package com.bluetoya.kotodo
+package com.bluetoya.kotodo.example
 
+import com.bluetoya.kotodo.example.toSlug
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll

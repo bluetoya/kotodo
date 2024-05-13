@@ -1,4 +1,4 @@
-package com.bluetoya.kotodo
+package com.bluetoya.kotodo.example
 
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.GetMapping

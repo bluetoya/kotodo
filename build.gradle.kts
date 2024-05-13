@@ -46,12 +46,12 @@ dependencies {
 	kapt("org.springframework.boot:spring-boot-configuration-processor")
 }
 
-tasks.withType<KotlinCompile> {
-	kotlinOptions {
-		freeCompilerArgs += "-Xjsr305=strict"
-		jvmTarget = "17"
-	}
-}
+//tasks.withType<KotlinCompile> {
+//	kotlinOptions {
+//		freeCompilerArgs += "-Xjsr305=strict"
+//		jvmTarget = "17"
+//	}
+//}
 
 tasks.withType<Test> {
 	useJUnitPlatform()
