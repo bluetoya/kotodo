@@ -1,9 +1,5 @@
 package com.bluetoya.kotodo.example
 
-import com.bluetoya.kotodo.example.Article
-import com.bluetoya.kotodo.example.ArticleRepository
-import com.bluetoya.kotodo.example.User
-import com.bluetoya.kotodo.example.UserRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
