@@ -1,15 +1,31 @@
 package com.bluetoya.kotodo.service
 
+import com.bluetoya.kotodo.domain.Task
 import org.springframework.stereotype.Service
 
 @Service
 class TaskService {
-    fun getList(): String {
+    fun getList(): List<Task> {
 
         return TODO("Provide the return value")
     }
 
-    fun getOne(): Any {
+    fun getOne(id: Long): Any {
+
+        return TODO("Provide the return value")
+    }
+
+    fun create(): Any {
+
+        return TODO("Provide the return value")
+    }
+
+    fun update(): Any {
+
+        return TODO("Provide the return value")
+    }
+
+    fun delete(): Any {
 
         return TODO("Provide the return value")
     }
