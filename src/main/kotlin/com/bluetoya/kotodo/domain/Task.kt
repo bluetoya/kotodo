@@ -9,7 +9,6 @@ import java.time.LocalDateTime
 class Task(
     @Id @GeneratedValue var id: Long,
     var name: String,
-    // TODO :: enum class 로 taskGroup 관리
     var taskGroup: String,
     var description: String,
     var isDone: Boolean,
