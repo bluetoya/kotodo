@@ -26,4 +26,3 @@
 
 ### db diagram
 ![image](https://github.com/bluetoya/kotodo/assets/168958526/5ac991ee-ef5b-424e-8c91-bea3fefac4f1)
-사용한 툴 : db diagram
