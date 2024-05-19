@@ -23,3 +23,7 @@
   - url : https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13
 - google-java-format
   - intelliJ에서 제공하는 기본 포맷 사용
+
+### db diagram
+![image](https://github.com/bluetoya/kotodo/assets/168958526/5ac991ee-ef5b-424e-8c91-bea3fefac4f1)
+사용한 툴 : db diagram
