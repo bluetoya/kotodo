@@ -8,6 +8,8 @@ plugins {
 	kotlin("plugin.allopen") version "1.9.23"
 	kotlin("plugin.jpa") version "1.9.23"
 	kotlin("kapt") version "1.9.23"
+	kotlin("plugin.lombok") version "2.0.0"
+	id("io.freefair.lombok") version "8.1.0"
 }
 
 allOpen {
@@ -55,4 +57,8 @@ dependencies {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+kapt {
+	keepJavacAnnotationProcessors = true
 }
