@@ -1,25 +1,27 @@
 package com.bluetoya.kotodo.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "to_do")
 public class ToDo {
-  @Id @GeneratedValue private Long id;
+  @Id private Long id;
 
+  @Column(name = "name")
   private String name;
 
+  @Column(name = "to_do_group")
   private String toDoGroup;
 
+  @Column(name = "description")
   private String description;
 
+  @Column(name = "is_done")
   private boolean isDone;
 
+  @Column(name = "due_date")
   private LocalDateTime dueDate;
 
   // https://www.baeldung.com/jpa-no-argument-constructor-entity-class
@@ -42,27 +44,27 @@ public class ToDo {
     this.dueDate = dueDate;
   }
 
-    public Long getId() {
-        return id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public String getToDoGroup() {
-        return toDoGroup;
-    }
+  public String getToDoGroup() {
+    return toDoGroup;
+  }
 
-    public String getDescription() {
-        return description;
-    }
+  public String getDescription() {
+    return description;
+  }
 
-    public boolean isDone() {
-        return isDone;
-    }
+  public boolean isDone() {
+    return isDone;
+  }
 
-    public LocalDateTime getDueDate() {
-        return dueDate;
-    }
+  public LocalDateTime getDueDate() {
+    return dueDate;
+  }
 }
