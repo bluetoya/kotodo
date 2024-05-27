@@ -12,6 +12,10 @@ spring:
   sql:
     init:
       platform: h2
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 blog:
   title: Blog
   banner:
