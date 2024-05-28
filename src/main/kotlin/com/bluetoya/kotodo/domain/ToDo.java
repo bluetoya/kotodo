@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 public class ToDo {
   @Id private Long id;
 
-  @Column(name = "name")
+  @Column(name = "name", nullable = false)
   private String name;
 
   @Column(name = "to_do_group")
@@ -18,10 +18,10 @@ public class ToDo {
   @Column(name = "description")
   private String description;
 
-  @Column(name = "is_done")
+  @Column(name = "is_done", nullable = false)
   private boolean isDone;
 
-  @Column(name = "due_date")
+  @Column(name = "due_date", nullable = false)
   private LocalDateTime dueDate;
 
   // https://www.baeldung.com/jpa-no-argument-constructor-entity-class

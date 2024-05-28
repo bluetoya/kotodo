@@ -1,6 +1,7 @@
 package com.bluetoya.kotodo.controller;
 
 import com.bluetoya.kotodo.service.ToDoService;
+import com.bluetoya.kotodo.service.request.ToDoRequest;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -24,17 +25,17 @@ public class ToDoController {
     }
 
     @PostMapping
-    public Object create() {
-        return toDoService.create();
+    public Object create(@RequestBody ToDoRequest request) {
+        return toDoService.create(request);
     }
 
-    @PutMapping("/{id}")
-    public Object update(@PathVariable Long id) {
-        return toDoService.update(id);
+    @PutMapping
+    public Object update() {
+        return toDoService.update();
     }
 
     @DeleteMapping("/{id}")
-    public Object delete(@PathVariable Long id) {
-        return toDoService.delete(id);
+    public void delete(@PathVariable Long id) {
+        toDoService.delete(id);
     }
 }
