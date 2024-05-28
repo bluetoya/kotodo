@@ -1,7 +1,9 @@
 package com.bluetoya.kotodo.controller;
 
 import com.bluetoya.kotodo.service.ToDoService;
+import com.bluetoya.kotodo.service.records.ToDoRecord;
 import com.bluetoya.kotodo.service.request.ToDoRequest;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -25,7 +27,7 @@ public class ToDoController {
     }
 
     @PostMapping
-    public Object create(@RequestBody ToDoRequest request) {
+    public Object create(@Valid @RequestBody ToDoRecord request) {
         return toDoService.create(request);
     }
 
