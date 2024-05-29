@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service
 
 @Service
 class TaskService {
-    fun getList(): List<Task> {
+    fun getList(): String {
 
-        return TODO("Provide the return value")
+        return "test";
     }
 
     fun getOne(id: Long): Any {
