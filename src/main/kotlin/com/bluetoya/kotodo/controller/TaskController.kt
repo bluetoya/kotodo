@@ -25,7 +25,7 @@ class TaskController(private val taskService: TaskService) {
     @PutMapping
     fun update() = taskService.update()
 
-    @DeleteMapping
-    fun delete() = taskService.delete()
+    @DeleteMapping("/{id}")
+    fun delete(@PathVariable id: Long) = taskService.delete(id)
 
 }
