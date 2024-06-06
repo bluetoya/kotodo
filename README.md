@@ -9,12 +9,12 @@
 이후 더 필요하면 추가 예정
 
 ### API 구현
-- 할 일(todo)
-  - todo 리스트 가져오기
-  - todo 생성
-  - todo 수정
-  - todo 삭제
-- todo 그룹
+- 할 일(task)
+  - task 리스트 가져오기
+  - task 생성
+  - task 수정
+  - task 삭제
+- task 그룹
   - 그룹 전체 조회
   - 그룹 낱개로 조회
   - 그룹 생성
