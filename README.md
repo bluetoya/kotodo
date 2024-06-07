@@ -6,7 +6,7 @@
 - Spring Boot (3.2.5)
 - MySQL
 - JPA
-이후 더 필요하면 추가 예정
+- 이후 더 필요하면 추가 예정
 
 ### API 구현
 - 할 일(task)
