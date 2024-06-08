@@ -1,10 +1,14 @@
 package com.bluetoya.kotodo.service
 
-import com.bluetoya.kotodo.domain.Task
+import com.bluetoya.kotodo.domain.TaskDomainService
 import org.springframework.stereotype.Service
 
 @Service
-class TaskService {
+class TaskService(
+    private val taskDomainService: TaskDomainService
+) {
+
+
     fun getList(): String {
 
         return "test";
