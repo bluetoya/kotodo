@@ -1,5 +1,6 @@
 package com.bluetoya.kotodo.service
 
+import com.bluetoya.kotodo.domain.Task
 import com.bluetoya.kotodo.domain.TaskDomainService
 import org.springframework.stereotype.Service
 
@@ -8,10 +9,8 @@ class TaskService(
     private val taskDomainService: TaskDomainService
 ) {
 
-
-    fun getList(): String {
-
-        return "test";
+    fun getList(): Iterable<Task> {
+        return taskDomainService.getList();
     }
 
     fun getOne(id: Long): Any {
