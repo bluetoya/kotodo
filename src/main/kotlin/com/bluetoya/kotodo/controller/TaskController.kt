@@ -7,14 +7,16 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.PutMapping
 import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
+import java.time.LocalDateTime
 
 @RestController
 @RequestMapping("/task")
 class TaskController(private val taskService: TaskService) {
 
     @GetMapping("/list")
-    fun getList() = taskService.getList()
+    fun getList(@RequestParam dueDate: LocalDateTime) = taskService.getList(dueDate)
 
     @GetMapping("/{id}")
     fun getOne(@PathVariable id: Long) = taskService.getOne(id)
