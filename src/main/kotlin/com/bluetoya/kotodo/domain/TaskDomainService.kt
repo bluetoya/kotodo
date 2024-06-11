@@ -19,4 +19,8 @@ class TaskDomainService(private val taskRepository: TaskRepository) {
     private fun getOneOptional(id: Long): Optional<Task> {
         return taskRepository.findById(id);
     }
+
+    fun delete(id: Long) {
+        taskRepository.deleteById(id)
+    }
 }

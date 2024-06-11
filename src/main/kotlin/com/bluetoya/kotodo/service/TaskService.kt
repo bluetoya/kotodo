@@ -29,8 +29,8 @@ class TaskService(
         return TODO("Provide the return value")
     }
 
-    fun delete(id: Long): Any {
+    fun delete(id: Long) {
 
-        return TODO("Provide the return value")
+        taskDomainService.delete(id)
     }
 }
