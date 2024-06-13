@@ -1,4 +1,12 @@
 package com.bluetoya.kotodo.service.request
 
-class TaskRequest {
+import java.time.LocalDateTime
+
+class TaskRequest(
+    var name: String,
+    var taskGroup: String,
+    var description: String,
+    var isDone: Boolean,
+    var dueDate: LocalDateTime
+) {
 }
