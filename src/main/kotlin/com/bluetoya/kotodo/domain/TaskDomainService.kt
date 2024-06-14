@@ -1,6 +1,7 @@
 package com.bluetoya.kotodo.domain
 
 import com.bluetoya.kotodo.domain.repo.TaskRepository
+import com.bluetoya.kotodo.service.request.TaskCreateRequest
 import org.springframework.stereotype.Service
 import java.time.LocalDateTime
 import java.util.*
@@ -22,5 +23,10 @@ class TaskDomainService(private val taskRepository: TaskRepository) {
 
     fun delete(id: Long) {
         taskRepository.deleteById(id)
+    }
+
+    fun createOne(request: TaskCreateRequest): Long {
+//        return taskRepository.save(request.toEntity())
+        return TODO("return id of saved task")
     }
 }

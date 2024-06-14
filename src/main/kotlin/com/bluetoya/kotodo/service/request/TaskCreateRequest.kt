@@ -1,12 +1,13 @@
 package com.bluetoya.kotodo.service.request
 
+import com.bluetoya.kotodo.domain.Task
+import org.jetbrains.annotations.NotNull
 import java.time.LocalDateTime
 
-class TaskRequest(
-    var name: String,
+class TaskCreateRequest(
+    @NotNull var name: String,
     var taskGroup: String,
     var description: String,
-    var isDone: Boolean,
     var dueDate: LocalDateTime
 ) {
 }

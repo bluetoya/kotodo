@@ -2,6 +2,7 @@ package com.bluetoya.kotodo.service
 
 import com.bluetoya.kotodo.domain.Task
 import com.bluetoya.kotodo.domain.TaskDomainService
+import com.bluetoya.kotodo.service.request.TaskCreateRequest
 import org.springframework.stereotype.Service
 import java.time.LocalDateTime
 
@@ -19,9 +20,9 @@ class TaskService(
         return taskDomainService.getOne(id)
     }
 
-    fun create(): Any {
+    fun create(request: TaskCreateRequest): Long {
 
-        return TODO("Provide the return value")
+        return taskDomainService.createOne(request)
     }
 
     fun update(): Any {

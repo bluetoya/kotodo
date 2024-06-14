@@ -1,6 +1,8 @@
 package com.bluetoya.kotodo.controller
 
 import com.bluetoya.kotodo.service.TaskService
+import com.bluetoya.kotodo.service.request.TaskCreateRequest
+import jakarta.validation.Valid
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -22,7 +24,7 @@ class TaskController(private val taskService: TaskService) {
     fun getOne(@PathVariable id: Long) = taskService.getOne(id)
 
     @PostMapping
-    fun create() = taskService.create()
+    fun create(@Valid request: TaskCreateRequest) = taskService.create(request)
 
     @PutMapping
     fun update() = taskService.update()
