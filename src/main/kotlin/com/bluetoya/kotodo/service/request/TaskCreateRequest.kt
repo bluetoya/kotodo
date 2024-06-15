@@ -1,6 +1,5 @@
 package com.bluetoya.kotodo.service.request
 
-import com.bluetoya.kotodo.domain.Task
 import org.jetbrains.annotations.NotNull
 import java.time.LocalDateTime
 
