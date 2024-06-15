@@ -3,6 +3,7 @@ package com.bluetoya.kotodo.domain
 import com.bluetoya.kotodo.domain.repo.TaskRepository
 import com.bluetoya.kotodo.service.request.TaskCreateRequest
 import org.springframework.stereotype.Service
+import java.lang.Exception
 import java.time.LocalDateTime
 import java.util.*
 
@@ -26,7 +27,11 @@ class TaskDomainService(private val taskRepository: TaskRepository) {
     }
 
     fun createOne(request: TaskCreateRequest): Long {
-//        return taskRepository.save(request.toEntity())
-        return TODO("return id of saved task")
+        val task = taskRepository.save(request.toEntity())
+        if (task.id != null) {
+            // smart cast
+            return task.id!!
+        }
+        throw Exception("task not found")
     }
 }
