@@ -2,8 +2,8 @@ package com.bluetoya.kotodo.domain
 
 import com.bluetoya.kotodo.domain.repo.TaskRepository
 import com.bluetoya.kotodo.service.request.TaskCreateRequest
+import com.bluetoya.kotodo.service.request.TaskRequest
 import org.springframework.stereotype.Service
-import java.lang.Exception
 import java.time.LocalDateTime
 import java.util.*
 
@@ -33,5 +33,10 @@ class TaskDomainService(private val taskRepository: TaskRepository) {
             return task.id!!
         }
         throw Exception("task not found")
+    }
+
+    fun update(request: TaskRequest): Long {
+        var task = taskRepository.findById(request.id)
+        return 1L
     }
 }
