@@ -37,6 +37,7 @@ class TaskDomainService(private val taskRepository: TaskRepository) {
 
     fun update(request: TaskRequest): Long {
         var task = taskRepository.findById(request.id)
+        task.update(request)
         return 1L
     }
 }
