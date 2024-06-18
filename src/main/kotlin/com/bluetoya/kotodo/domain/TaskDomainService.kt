@@ -29,7 +29,6 @@ class TaskDomainService(private val taskRepository: TaskRepository) {
     fun createOne(request: TaskCreateRequest): Long {
         val task = taskRepository.save(request.toEntity())
         if (task.id != null) {
-            // smart cast
             return task.id!!
         }
         throw Exception("task not found")
