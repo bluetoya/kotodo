@@ -1,6 +1,7 @@
 package com.bluetoya.kotodo.domain
 
 import com.bluetoya.kotodo.service.request.TaskCreateRequest
+import com.bluetoya.kotodo.service.request.TaskRequest
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
@@ -11,19 +12,20 @@ import java.time.LocalDateTime
 class Task(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null,
-    val name: String,
-    val taskGroup: String,
-    val description: String,
-    val isDone: Boolean,
-    val dueDate: LocalDateTime
+    var name: String,
+    var taskGroup: String,
+    var description: String,
+    var isDone: Boolean,
+    var dueDate: LocalDateTime
 )
 
-fun TaskCreateRequest.toEntity() = Task(
-    name = this.name,
-    taskGroup = this.taskGroup.orEmpty(),
-    description = this.description.orEmpty(),
+fun toEntity(): Task = Task(
+    name = name,
+    taskGroup = taskGroup.orEmpty(),
+    description = description.orEmpty(),
     isDone = false,
-    dueDate = this.dueDateTime
+    dueDate = dueDateTime
 )
+
 
 
