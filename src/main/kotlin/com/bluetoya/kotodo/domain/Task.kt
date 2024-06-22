@@ -9,7 +9,7 @@ import java.time.LocalDateTime
 @Entity
 class Task(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = null,
+    val id: Long,
     var name: String,
     var taskGroup: String? = null,
     var description: String? = null,

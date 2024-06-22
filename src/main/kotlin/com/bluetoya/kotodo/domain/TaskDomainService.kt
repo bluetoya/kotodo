@@ -28,10 +28,7 @@ class TaskDomainService(private val taskRepository: TaskRepository) {
 
     fun createOne(request: TaskCreateRequest): Long {
         val task = taskRepository.save(request.toEntity())
-        if (task.id != null) {
-            return task.id!!
-        }
-        throw Exception("task not found")
+        return task.id
     }
 
     fun update(request: TaskRequest): Long {
@@ -42,6 +39,6 @@ class TaskDomainService(private val taskRepository: TaskRepository) {
         task.isDone = request.isDone
         task.dueDate = request.dueDate
 
-        return task.id!!
+        return task.id
     }
 }
