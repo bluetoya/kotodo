@@ -9,7 +9,7 @@ import java.util.*
 
 @Service
 class TaskDomainService(private val taskRepository: TaskRepository) {
-    fun getList(dueDate: LocalDateTime): Iterable<Task> {
+    fun getList(dueDate: LocalDateTime): List<Task> {
         return taskRepository.findAllByDueDate(dueDate)
     }
 

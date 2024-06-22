@@ -5,6 +5,6 @@ import org.springframework.data.repository.CrudRepository
 import java.time.LocalDateTime
 
 interface TaskRepository : CrudRepository<Task, Long> {
-    fun findAllByDueDate(dueDate: LocalDateTime): Iterable<Task>
+    fun findAllByDueDate(dueDate: LocalDateTime): List<Task>
 
 }
