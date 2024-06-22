@@ -18,7 +18,7 @@ import java.time.LocalDateTime
 @RequestMapping("/task")
 class TaskController(private val taskService: TaskService) {
 
-    @GetMapping("/list")
+    @GetMapping
     fun getList(@RequestParam dueDate: LocalDateTime) = taskService.getList(dueDate)
 
     @GetMapping("/{id}")
