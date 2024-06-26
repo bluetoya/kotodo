@@ -1,6 +1,6 @@
 package com.bluetoya.kotodo.service
 
-import com.bluetoya.kotodo.domain.Task
+import com.bluetoya.kotodo.domain.entity.Task
 import com.bluetoya.kotodo.domain.TaskDomainService
 import com.bluetoya.kotodo.service.request.TaskCreateRequest
 import com.bluetoya.kotodo.service.request.TaskRequest

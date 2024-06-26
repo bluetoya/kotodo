@@ -1,6 +1,6 @@
 package com.bluetoya.kotodo.service.request
 
-import com.bluetoya.kotodo.domain.Task
+import com.bluetoya.kotodo.domain.entity.Task
 import java.time.LocalDateTime
 
 data class TaskRequest(

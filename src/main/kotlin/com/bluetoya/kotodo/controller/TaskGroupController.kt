@@ -26,6 +26,6 @@ class TaskGroupController(val taskGroupService: TaskGroupService) {
     fun update() = taskGroupService.update()
 
     @DeleteMapping("/{id}")
-    fun delete(@PathVariable id: Long) = taskGroupService.delete()
+    fun delete(@PathVariable id: Long) = taskGroupService.delete(id)
 
 }

@@ -1,15 +1,17 @@
 package com.bluetoya.kotodo.service
 
+import com.bluetoya.kotodo.domain.TaskGroupDomainService
+import com.bluetoya.kotodo.domain.entity.TaskGroup
 import org.springframework.stereotype.Service
 
 @Service
-class TaskGroupService {
-    fun getList(): Any {
-        return TODO("get task group list")
+class TaskGroupService(private val taskGroupDomainService: TaskGroupDomainService) {
+    fun getList(): Iterable<TaskGroup> {
+        return taskGroupDomainService.getList()
     }
 
-    fun getOne(id: Long): Any {
-        return TODO("get one task group")
+    fun getOne(id: Long): TaskGroup {
+        return taskGroupDomainService.getOne(id)
     }
 
     fun create(): Any {
@@ -20,7 +22,7 @@ class TaskGroupService {
         return TODO("")
     }
 
-    fun delete(): Any {
-        return TODO("")
+    fun delete(id: Long) {
+        taskGroupDomainService.delete(id)
     }
 }
