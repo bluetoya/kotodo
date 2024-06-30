@@ -27,19 +27,19 @@ class TaskGroupDomainService(private val taskGroupRepository: TaskGroupRepositor
         taskGroupRepository.deleteById(id)
     }
 
-//    fun createOne(request: TaskCreateRequest): Long {
-//        val task = taskGroupRepository.save(request.toEntity())
-//        return task.id
-//    }
-//
-//    fun update(request: TaskRequest): Long {
-//        val task = taskGroupRepository.findById(request.id).get()
-//        task.name = request.name
-//        task.taskGroup = request.taskGroup
-//        task.description = request.description
-//        task.isDone = request.isDone
-//        task.dueDate = request.dueDate
-//
-//        return task.id
-//    }
+    fun createOne(request: TaskCreateRequest): Long {
+        val task = taskGroupRepository.save(request.toEntity())
+        return task.id
+    }
+
+    fun update(request: TaskRequest): Long {
+        val task = taskGroupRepository.findById(request.id).get()
+        task.name = request.name
+        task.taskGroup = request.taskGroup
+        task.description = request.description
+        task.isDone = request.isDone
+        task.dueDate = request.dueDate
+
+        return task.id
+    }
 }
