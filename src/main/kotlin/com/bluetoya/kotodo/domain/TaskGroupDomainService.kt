@@ -33,13 +33,8 @@ class TaskGroupDomainService(private val taskGroupRepository: TaskGroupRepositor
     }
 
     fun update(request: TaskRequest): Long {
-        val task = taskGroupRepository.findById(request.id).get()
-        task.name = request.name
-        task.taskGroup = request.taskGroup
-        task.description = request.description
-        task.isDone = request.isDone
-        task.dueDate = request.dueDate
-
-        return task.id
+        val taskGroup = taskGroupRepository.findById(request.id).get()
+        taskGroup.name = request.name
+        return taskGroup.id
     }
 }
