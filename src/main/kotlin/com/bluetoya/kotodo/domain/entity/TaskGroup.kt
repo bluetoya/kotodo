@@ -10,8 +10,4 @@ class TaskGroup(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
     var name: String
-) {
-    fun toEntity(): TaskGroup = TaskGroup(
-        name = name,
-    )
-}
+)

@@ -3,6 +3,7 @@ package com.bluetoya.kotodo.domain
 import com.bluetoya.kotodo.domain.entity.TaskGroup
 import com.bluetoya.kotodo.domain.repo.TaskGroupRepository
 import com.bluetoya.kotodo.service.request.TaskCreateRequest
+import com.bluetoya.kotodo.service.request.TaskGroupCreateRequest
 import com.bluetoya.kotodo.service.request.TaskRequest
 import org.springframework.stereotype.Service
 import java.util.*
@@ -27,7 +28,7 @@ class TaskGroupDomainService(private val taskGroupRepository: TaskGroupRepositor
         taskGroupRepository.deleteById(id)
     }
 
-    fun createOne(request: TaskCreateRequest): Long {
+    fun createOne(request: TaskGroupCreateRequest): Long {
         val task = taskGroupRepository.save(request.toEntity())
         return task.id
     }
