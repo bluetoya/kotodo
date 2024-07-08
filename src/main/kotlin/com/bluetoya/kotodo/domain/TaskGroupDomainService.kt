@@ -2,7 +2,6 @@ package com.bluetoya.kotodo.domain
 
 import com.bluetoya.kotodo.domain.entity.TaskGroup
 import com.bluetoya.kotodo.domain.repo.TaskGroupRepository
-import com.bluetoya.kotodo.service.request.TaskCreateRequest
 import com.bluetoya.kotodo.service.request.TaskGroupCreateRequest
 import com.bluetoya.kotodo.service.request.TaskRequest
 import org.springframework.stereotype.Service
