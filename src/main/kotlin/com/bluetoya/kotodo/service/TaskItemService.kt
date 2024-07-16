@@ -13,15 +13,15 @@ class TaskItemService {
         return TODO()
     }
 
-    fun create(): Any {
+    fun create(taskItem: TaskItem): TaskItem {
         return TODO()
     }
 
-    fun update(): Any {
+    fun update(taskItem: TaskItem): TaskItem {
         return TODO()
     }
 
-    fun delete(): Any {
+    fun delete(taskItemId: Long) {
         return TODO()
     }
 
