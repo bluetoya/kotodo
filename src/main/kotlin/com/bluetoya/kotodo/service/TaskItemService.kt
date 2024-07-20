@@ -1,10 +1,11 @@
 package com.bluetoya.kotodo.service
 
+import com.bluetoya.kotodo.domain.TaskItemDomainService
 import com.bluetoya.kotodo.domain.entity.TaskItem
 import org.springframework.stereotype.Service
 
 @Service
-class TaskItemService {
+class TaskItemService(val taskItemDomainService: TaskItemDomainService) {
     fun getList(taskId: Long): Any {
         return TODO()
     }
