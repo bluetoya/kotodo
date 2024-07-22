@@ -2,6 +2,7 @@ package com.bluetoya.kotodo.domain
 
 import com.bluetoya.kotodo.domain.entity.TaskItem
 import com.bluetoya.kotodo.domain.repo.TaskItemRepository
+import com.bluetoya.kotodo.service.request.TaskItemCreateRequest
 import org.springframework.stereotype.Service
 import java.util.*
 
@@ -25,8 +26,9 @@ class TaskItemDomainService(val taskItemRepository: TaskItemRepository) {
         taskItemRepository.deleteById(id)
     }
 
-    fun createOne(): Long {
-        return TODO()
+    fun createOne(request: TaskItemCreateRequest): Long {
+        val taskItem = taskItemRepository.save(request.toEntity())
+        return taskItem.id
     }
 
     fun update(): Long {
