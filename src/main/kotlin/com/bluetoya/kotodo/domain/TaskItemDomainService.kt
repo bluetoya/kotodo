@@ -26,9 +26,8 @@ class TaskItemDomainService(val taskItemRepository: TaskItemRepository) {
         taskItemRepository.deleteById(id)
     }
 
-    fun createOne(request: TaskItemCreateRequest): Long {
+    fun createOne(request: TaskItemCreateRequest):  {
         val taskItem = taskItemRepository.save(request.toEntity())
-        return taskItem.id
     }
 
     fun update(): Long {
